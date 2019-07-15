@@ -1,0 +1,14 @@
+{% load static %}
+<section class="our-products text-center mt-5 mb-5 pt-4 pb-4">
+    <h1 class="section-title">OUR PRODUCTS</h1>
+    <div class="section-title-divider"></div>
+    <span class="section-description">
+        It’s easy being green- Reduce, Reuse, Recycle.</span>
+    <div class="">
+    <div class="row">
+      {% for obj in object_list %}
+          {% include "products/snippets/card.html" with instance=obj %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

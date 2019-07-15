@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Uneako e-commerce</title>
+
+    {% include "base/css.html" %}
+    {% include "base/js.html" %}
+  </head>
+  <body>
+    {% include "base/nav.html" %}
+    {% block content %}{% endblock %}
+    {% include "base/footer.html" %}
+    
+  </body>
+  {% include "base/js.html" %}
+</html>

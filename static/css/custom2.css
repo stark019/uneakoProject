@@ -1,0 +1,255 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+/* slider-shop */
+.slider {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide1 {
+  background: url('../img/p8.jpeg') no-repeat center;
+  background-size: cover;
+  animation:fade 8s infinite;
+-webkit-animation:fade 8s infinite;
+
+} 
+.slide2 {
+  background: url('../img/p7.jpg')no-repeat center;
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+    background: url('../img/p6.jpg')no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+
+/* products-section */
+.product-image{
+  position: relative;
+}
+
+.new-products, .trending-products, .comingsoon-products{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-weight: bold;
+  padding: 1px 4px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.new-products{
+  background-color: #57b846;
+}
+
+.trending-products{
+  background-color: #DD3E3E;
+}
+
+.comingsoon-products{
+  background-color: #fd7e14;
+}
+
+.our-products{
+  width: 80%;
+  margin: 10px auto;
+}
+
+.our-products img{
+  width: 100%;
+  height: 300px;
+}
+
+.price{
+  font-size: 1rem !important;
+  float: right;
+}
+
+.shop-product-overlay{
+  z-index: 2;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  display: none;
+}
+
+.shop-product-overlay button{
+  margin: 5px;
+}
+
+.product-image:hover .shop-product-overlay{
+  display: flex;
+  top: 0;
+  height: 100%;
+}
+
+
+/* customer's blog */
+
+.review-section{
+  background-color: #f6f6f6;
+}
+
+.customer-blog .customer{
+  width: 120px;
+  height: 120px;
+}
+
+.customer-review{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px;
+  width: 340px;
+  /* padding: 20px 5px; */
+  border: 2px solid #27ccee;
+  border-radius: 20px;
+}
+
+.customer-review{
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.customer{
+  margin: 0 auto;
+}
+
+.quote-right{
+  float: right;
+}
+
+/*  */
+.section-description p{
+  font-size: 1rem;
+}
+
+
+
+/* parallax quote */
+.parallax-quote{
+  height: 75vh;
+  width: 100%;
+  background: url('http://whrc.org/wp-content/uploads/2019/05/29664357826_a16700399f_o.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
+
+@media only screen and (max-width: 1300px){
+  .our-products{
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1100px){
+  .our-products{
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .our-products{
+    width: 86%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .slider{
+    height: 50vh;
+  }
+
+  .parallax-quote{
+    height: 60vh;
+    padding: 10px;
+  }
+}
+
+
+/* ------------product-details-page---------- */
+
+.product-page-header{
+  height: 40vh;
+  background: url('../img/p12.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.header-overlay{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+
+/* product-details section */
+
+.product-details{
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.product-pics{
+  margin-top: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 0.8rem;
+}
+
+.product-pics div{
+  border: 2px solid black;
+}
+
+

@@ -1,0 +1,23 @@
+
+
+<div class="col-lg-3 col-md-6 col-sm-12 mt-5">
+        {% if instance.image %}
+          <div class="product-image">
+              <img src="{{ instance.image.url }}" alt="{{ instance.title}}">
+              
+        {% endif %}      
+              <div class="shop-product-overlay">
+                <a href="{{ instance.get_absolute_url }}"><button type="button" class="btn btn-primary">Product Details</button></a>
+                <a href="{{ instance.get_absolute_url }}"><button type="button" class="btn btn-success">Add to Cart&nbsp;&nbsp;<i class="fas fa-cart-plus text-light"></i></button></a>
+              </div>
+          </div>
+              <div class="">
+                <span class="new-products">New</span>
+              </div>
+
+          
+          <div class="product-content text-left mt-2">
+            <p><span class="font-weight-bolder text-dark product-name">{{ instance.title }}</span>
+            <span class="lead price text-success">&#8377; {{ instance.price }}</span></p>
+          </div>
+        </div>

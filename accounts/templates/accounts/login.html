@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+<!--<div class="text-center">
+  <h1>Login</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="col-sm-6 col-12">
+        <form method="POST"> {% csrf_token %}
+          {{ form }}
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+   <p><strong>-- OR --</strong></p>
+   <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+   <p><strong>-- OR --</strong></p>
+   <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
+   <p><strong>-- OR --</strong></p>
+   <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a><br>
+</div>
+<div class="col my-5 py-5">
+
+</div>
+<div class="col my-5 py-5">
+
+</div>
+<div class="col my-5">
+
+</div>-->
+<div class="limiter">
+      <div class="container-login100">
+        <div class="wrap-login100">
+          <div class="login100-form-title">
+            <span class="login100-form-title-1">
+              LOG IN
+            </span>
+          </div>
+  
+          <form method="POST" class="login100-form validate-form ">
+            <div class="wrap-input100 validate-input m-b-26 m-b-18" >
+              {% csrf_token %}              
+              {{ form }}
+            </div>
+  
+  
+            <div class="flex-sb-m w-full p-b-30">
+              <div class="contact100-form-checkbox">
+                <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                <label class="label-checkbox100" for="ckb1">
+                  Remember me
+                </label>
+              </div>
+  
+              <div>
+                <a href="#" class="txt1">
+                  Forgot Password?
+                </a>
+              </div>
+            </div>
+            <div class="container">
+           <div class="container-login100-form-btn">
+            <!--<button class="login100-form-btn btn">
+							Login
+						</button>-->
+            <button type="submit" class="login100-form-btn btn">Login</button>
+          </div>
+          <div class="container-login100-form-btn">
+              <button class="btn-danger btn cancel" onclick="location.href = 'shop.html';">
+                Cancel
+              </button>
+            </div>
+            </div>
+            <hr> OR <hr>
+
+<div class="container-login100-form-btn">
+    <a href="#" class="btn btn-primary btn-block social-btn"><i class="fa fa-facebook pull-left"> </i>Log in with <b> Facebook</b></a>
+<a href="#" class="btn btn-danger btn-block social-btn"><i class="fa fa-google pull-left"> </i>Log in with <b> Google</b></a>
+</div>
+            <div>
+              <a href="sign-in.html" class="txt1">Create Account</a>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}
